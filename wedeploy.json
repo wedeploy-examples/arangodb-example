@@ -1,0 +1,16 @@
+{
+    "id": "db",
+    "image": "arangodb/arangodb:3.3.13",
+    "port": 8529,
+    "env": {
+        "ARANGO_NO_AUTH": "1"
+    },
+    "volumes": {
+        "data": "/var/lib/arangodb3",
+        "apps": "/var/lib/arangodb3-apps"
+    },
+    "healthCheck": {
+        "url": "localhost:8529"
+    },
+    "zeroDowntime": false
+}
